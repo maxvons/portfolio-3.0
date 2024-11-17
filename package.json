@@ -7,9 +7,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "lint": "npx @biomejs/biome check",
-    "lint-fix": "npx @biomejs/biome check --write"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
