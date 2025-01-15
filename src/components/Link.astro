@@ -1,0 +1,26 @@
+---
+interface Props {
+  url: string;
+  text: string;
+  newTab?: boolean;
+}
+
+const { url, text, newTab } = Astro.props;
+
+const getTarget = () => {
+  return newTab ? "_blank" : "_self";
+};
+---
+
+<a href={url} target={getTarget()}>{text}</a>
+
+<style>
+  @import "@styles/mixins.css";
+
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-uppercase);
+  }
+</style>
