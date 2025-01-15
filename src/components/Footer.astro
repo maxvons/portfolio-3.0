@@ -1,0 +1,31 @@
+---
+const today = new Date();
+---
+
+<footer>
+  &copy; {today.getFullYear()} Your name here. All rights reserved.
+</footer>
+<style>
+  @import "@styles/mixins.css";
+
+  footer {
+    @mixin centered-container;
+    flex-flow: column nowrap;
+    gap: var(--spacer-small);
+    color: var(--text-color-secondary);
+    font-size: var(--font-size-secondary);
+    text-align: center;
+    padding: var(--spacer-medium) 0;
+  }
+
+  .social-links {
+    @mixin centered-container;
+    gap: var(--spacer-small);
+  }
+
+  .icon {
+    color: var(--icon-color);
+    height: 32px;
+    width: 32px;
+  }
+</style>

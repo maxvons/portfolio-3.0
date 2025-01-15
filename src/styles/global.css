@@ -1,0 +1,42 @@
+@import "@styles/variables.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: var(--font-size-primary);
+  color: var(--text-color-primary);
+  background-color: var(--background-color);
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+  color: var(--text-color-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-header);
+  margin: 0;
+}
+
+p {
+  font-size: var(--font-size-primary);
+  line-height: var(--line-height);
+  max-width: var(--max-width-text);
+  margin: 0;
+}
+
+a {
+  color: var(--text-color-link);
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}

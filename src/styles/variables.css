@@ -1,0 +1,133 @@
+@import "@styles/mixins.css";
+
+@font-face {
+  font-family: PublicSansVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/PublicSansVariable.ttf") format("truetype");
+}
+@font-face {
+  font-family: PublicSansVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/PublicSansVariable-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: BricolageGrotesqueVariable;
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("/fonts/BricolageGrotesqueVariable.ttf") format("truetype");
+}
+
+/* CUSTOM: Define your light mode colors here */
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Background colors */
+    --background-color: #fff;
+    --background-color-nav: rgb(255 255 255 / 70%);
+    --background-color-footer: #fff;
+
+    /* Text colors */
+    --text-color-title: #020012;
+    --text-color-link: #020012;
+    --text-color-primary: #3d3d46;
+    --text-color-secondary: #666666;
+
+    /* Border styles */
+    --border-color-card: #d5d5d5;
+    --border-color-nav: #d5d5d5;
+
+    /* Misc. colors */
+    --icon-color: #020012;
+  }
+}
+
+/* CUSTOM: Define your dark mode colors here */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background colors */
+    --background-color: #000;
+    --background-color-nav: rgb(0 0 0 / 70%);
+    --background-color-footer: #000;
+
+    /* Text colors */
+    --text-color-title: #fff;
+    --text-color-link: #fff;
+    --text-color-primary: #ababab;
+    --text-color-secondary: #777777;
+
+    /* Border colors */
+    --border-color-card: #242424;
+    --border-color-nav: #242424;
+
+    /* Misc. colors */
+    --icon-color: #fff;
+  }
+}
+
+/* CUSTOM: Define all other variables here */
+:root {
+  /* Font families */
+  --primary-font: "PublicSansVariable", sans-serif;
+  --header-font: "BricolageGrotesqueVariable", sans-serif;
+  font-optical-sizing: auto; /* This enables optical sizing for the variable fonts so they look as good as possible at all sizes */
+
+  /* Font sizes */
+  --font-size-title: 3rem;
+  --font-size-header: 2rem;
+  --font-size-logo: 1.875rem;
+  --font-size-primary: 1.125rem;
+  --font-size-secondary: 0.875rem;
+
+  @mixin tablet {
+    --font-size-title: 4rem;
+    --font-size-header: 2.5rem;
+    --font-size-primary: 1.375rem;
+    --font-size-secondary: 1.125rem;
+  }
+
+  /* Letter spacing */
+  --letter-spacing-uppercase: 0.12em;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Line heights */
+  --line-height-header: 1;
+  --line-height-text: 1.5;
+
+  /* Border styles */
+  --border-radius: 20px;
+  --border-radius-rounded: 100px;
+  --border-radius-round: 50%;
+  --card-border: 1px solid var(--border-color-card);
+  --nav-border: 1px solid var(--border-color-nav);
+
+  /* Widths */
+  --page-width: 90%;
+  --nav-width: 90%;
+  --max-width-text: 600px;
+
+  @mixin tablet {
+    --page-width: 80%;
+    --nav-width: 90%;
+    --max-width-text: 700px;
+    --max-width-nav: 700px;
+  }
+
+  /* Spacers */
+  --spacer-very-large: 8rem;
+  --spacer-large-plus: 6rem;
+  --spacer-large: 4rem;
+  --spacer-medium-plus: 3rem;
+  --spacer-medium: 2rem;
+  --spacer-small: 1rem;
+  --spacer-very-small: 0.5rem;
+
+  /* Misc. */
+  --background-blur: 50%;
+}

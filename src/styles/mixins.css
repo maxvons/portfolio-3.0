@@ -1,0 +1,28 @@
+@define-mixin tablet {
+  @media screen and (min-width: 768px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin desktop {
+  @media screen and (min-width: 1440px) {
+    @mixin-content;
+  }
+}
+
+@define-mixin centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@define-mixin text-container $gap, $max-width {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: $gap;
+
+  > p {
+    max-width: $max-width;
+    line-height: var(--line-height-text);
+  }
+}

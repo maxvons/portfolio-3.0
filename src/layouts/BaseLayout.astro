@@ -1,0 +1,61 @@
+---
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+interface Props {
+  metadata: {
+    title: string;
+    description: string;
+    image?: string;
+  };
+  pageTitle: string;
+}
+
+const { metadata, pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={metadata.title}
+      description={metadata.description}
+      image={metadata.image}
+    />
+  </head>
+  <body>
+    <Header class="header" />
+    <main>
+      <h1 class="title">{pageTitle}</h1>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @import "@styles/mixins.css";
+
+  body {
+    @mixin centered-container;
+    flex-flow: column nowrap;
+  }
+
+  .header {
+    margin-bottom: var(--spacer-very-large);
+  }
+
+  main {
+    @mixin centered-container;
+    flex-flow: column nowrap;
+    width: var(--page-width);
+    margin-bottom: var(--spacer-very-large);
+  }
+
+  .title {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-header);
+    margin-bottom: var(--spacer-medium);
+  }
+</style>
