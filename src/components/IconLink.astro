@@ -5,28 +5,32 @@ interface Props {
   url: string;
   icon: string;
   newTab?: boolean;
-  class?: string;
 }
 
-const { url, icon, newTab, class: className, ...rest } = Astro.props;
+const { url, icon, newTab } = Astro.props;
 
 const getTarget = () => {
   return newTab ? "_blank" : "_self";
 };
 ---
 
-<a class={className} href={url} target={getTarget()} {...rest}>
+<a href={url} target={getTarget()}>
   <Icon name={icon} />
 </a>
 
 <style>
   @import "@styles/mixins.css";
+
+  a {
+    @mixin centered-container;
+    text-decoration: none;
+    border: var(--link-border);
+    border-radius: var(--border-radius-small);
+    padding: var(--spacer-very-small-plus);
+  }
+
   [data-icon] {
     color: var(--icon-color);
-    font-size: 32px;
-
-    @mixin tablet {
-      font-size: 32px;
-    }
+    font-size: 24px;
   }
 </style>

@@ -5,6 +5,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "src/consts";
 import BlogCard from "@components/BlogCard.astro";
 import Memoji from "@images/memoji.png";
 import Img from "@components/Img.astro";
+import IconLink from "@components/IconLink.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -16,8 +17,20 @@ const posts = (await getCollection("blog")).sort(
   pageTitle="Maximilian"
   landingPage
 >
-  <div class="avatar-container">
-    <Img src={Memoji} alt="Maximilian thinking" class="avatar" />
+  <div class="info">
+    <div class="avatar-container">
+      <Img src={Memoji} alt="Maximilian thinking" class="avatar" />
+    </div>
+    <div class="social-links">
+      <IconLink url="https://x.com/maximilianvons" icon="brand-x" newTab />
+      <IconLink url="https://github.com/maxvons" icon="brand-github" newTab />
+      <IconLink url="mailto:maximilianvons@gmail.com" icon="mail" newTab />
+      <IconLink
+        url="/cv-maximilian-von-stephanides.pdf"
+        icon="file-cv"
+        newTab
+      />
+    </div>
   </div>
   <div class="posts">
     {
@@ -36,15 +49,10 @@ const posts = (await getCollection("blog")).sort(
 <style>
   @import "@styles/mixins.css";
 
-  .posts {
-    display: flex;
+  .info {
+    @mixin centered-container;
     flex-flow: column nowrap;
     gap: var(--spacer-medium);
-    max-width: var(--max-width-text);
-  }
-
-  a {
-    text-decoration: none;
   }
 
   .avatar-container {
@@ -67,6 +75,8 @@ const posts = (await getCollection("blog")).sort(
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 1px solid white;
+
     img {
       box-shadow: var(--shadow-avatar);
     }
@@ -75,5 +85,21 @@ const posts = (await getCollection("blog")).sort(
       height: 200px;
       width: 200px;
     }
+  }
+
+  .social-links {
+    display: flex;
+    gap: var(--spacer-small);
+  }
+
+  .posts {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--spacer-medium);
+    max-width: var(--max-width-text);
+  }
+
+  a {
+    text-decoration: none;
   }
 </style>

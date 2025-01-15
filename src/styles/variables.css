@@ -39,6 +39,7 @@
     /* Border styles */
     --border-color-card: #d5d5d5;
     --border-color-nav: #d5d5d5;
+    --border-color-link: #c3c3c3;
 
     /* Misc. colors */
     --icon-color: #020012;
@@ -63,6 +64,7 @@
     /* Border colors */
     --border-color-card: #242424;
     --border-color-nav: #242424;
+    --border-color-link: #323232;
 
     /* Shadows */
     --shadow-avatar: 0 8px 20px rgb(106 106 106 / 30%);
@@ -105,11 +107,13 @@
   --line-height-text: 1.5;
 
   /* Border styles */
+  --border-radius-small: 10px;
   --border-radius: 20px;
   --border-radius-rounded: 100px;
   --border-radius-round: 50%;
   --card-border: 1px solid var(--border-color-card);
   --nav-border: 1px solid var(--border-color-nav);
+  --link-border: 1px solid var(--border-color-link);
 
   /* Widths */
   --page-width: 90%;
@@ -130,6 +134,7 @@
   --spacer-medium-plus: 3rem;
   --spacer-medium: 2rem;
   --spacer-small: 1rem;
+  --spacer-very-small-plus: 0.75rem;
   --spacer-very-small: 0.5rem;
 
   /* Misc. */
