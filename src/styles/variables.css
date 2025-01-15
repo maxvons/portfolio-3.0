@@ -64,6 +64,9 @@
     --border-color-card: #242424;
     --border-color-nav: #242424;
 
+    /* Shadows */
+    --shadow-avatar: 0 8px 20px rgb(106 106 106 / 30%);
+
     /* Misc. colors */
     --icon-color: #fff;
   }
