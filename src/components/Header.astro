@@ -1,5 +1,4 @@
 ---
-import IconLink from "./IconLink.astro";
 import Link from "./Link.astro";
 import Avatar from "@components/Avatar.astro";
 import XProfileImg from "@images/x-avatar.jpg";
@@ -22,12 +21,6 @@ const { class: className, ...rest } = Astro.props;
     </a>
     <div class="links">
       <Link url="/about" text="About" />
-      <IconLink
-        url="https://x.com/maximilianvons"
-        icon="brand-x"
-        newTab
-        class="icon"
-      />
     </div>
   </nav>
 </header>
@@ -63,13 +56,5 @@ const { class: className, ...rest } = Astro.props;
     display: flex;
     align-items: center;
     gap: var(--spacer-small);
-  }
-
-  .icon {
-    padding: 12px 0 8px 0;
-
-    [data-icon] {
-      font-size: 32px;
-    }
   }
 </style>
