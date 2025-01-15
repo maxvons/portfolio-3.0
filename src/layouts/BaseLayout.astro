@@ -10,9 +10,10 @@ interface Props {
     image?: string;
   };
   pageTitle: string;
+  landingPage?: boolean;
 }
 
-const { metadata, pageTitle } = Astro.props;
+const { metadata, pageTitle, landingPage } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,7 +28,9 @@ const { metadata, pageTitle } = Astro.props;
   <body>
     <Header class="header" />
     <main>
-      <h1 class="title">{pageTitle}</h1>
+      <h1 class:list={["title", { landing: landingPage }]}>
+        {pageTitle}
+      </h1>
       <slot />
     </main>
     <Footer />
@@ -57,5 +60,9 @@ const { metadata, pageTitle } = Astro.props;
     font-size: var(--font-size-title);
     line-height: var(--line-height-header);
     margin-bottom: var(--spacer-medium);
+    text-transform: uppercase;
+    background: var(--text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 </style>

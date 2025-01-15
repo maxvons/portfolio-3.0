@@ -58,6 +58,7 @@
     --text-color-link: #fff;
     --text-color-primary: #ababab;
     --text-color-secondary: #777777;
+    --text-gradient: linear-gradient(#ffffff, #ffffff 50%, #aeaeae);
 
     /* Border colors */
     --border-color-card: #242424;
@@ -76,14 +77,14 @@
   font-optical-sizing: auto; /* This enables optical sizing for the variable fonts so they look as good as possible at all sizes */
 
   /* Font sizes */
-  --font-size-title: 3rem;
+  --font-size-title: 5rem;
   --font-size-header: 2rem;
   --font-size-logo: 1.875rem;
   --font-size-primary: 1.125rem;
   --font-size-secondary: 0.875rem;
 
   @mixin tablet {
-    --font-size-title: 4rem;
+    --font-size-title: 8rem;
     --font-size-header: 2.5rem;
     --font-size-primary: 1.375rem;
     --font-size-secondary: 1.125rem;
