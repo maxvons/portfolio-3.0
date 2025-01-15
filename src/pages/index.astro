@@ -31,7 +31,15 @@ const posts = (await getCollection("blog")).sort(
         newTab
       />
     </div>
+    <p class="location">Oslo, Norway</p>
   </div>
+  <h2 class="subheader">
+    I'm a <span class="purple italic">thinker</span>, <span
+      class="yellow italic">designer</span
+    >, <span class="green italic">developer</span>, <span class="blue italic"
+      >photographer</span
+    >, and <span class="red italic">powerlifter</span>
+  </h2>
   <div class="posts">
     {
       posts.map((post) => (
@@ -49,10 +57,16 @@ const posts = (await getCollection("blog")).sort(
 <style>
   @import "@styles/mixins.css";
 
+  .section {
+    @mixin centered-container;
+    flex-flow: column nowrap;
+  }
+
   .info {
     @mixin centered-container;
     flex-flow: column nowrap;
     gap: var(--spacer-medium);
+    margin-bottom: var(--spacer-medium);
   }
 
   .avatar-container {
@@ -75,7 +89,6 @@ const posts = (await getCollection("blog")).sort(
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 1px solid white;
 
     img {
       box-shadow: var(--shadow-avatar);
@@ -90,6 +103,48 @@ const posts = (await getCollection("blog")).sort(
   .social-links {
     display: flex;
     gap: var(--spacer-small);
+  }
+
+  .location {
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-uppercase);
+    font-size: var(--font-size-secondary);
+    color: var(--text-color-secondary);
+  }
+
+  .subheader {
+    color: var(--text-color-secondary);
+    font-family: var(--primary-font);
+    font-size: var(--font-size-header);
+    max-width: var(--max-width-text);
+    text-align: center;
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-subheader);
+    margin-bottom: var(--spacer-very-large);
+  }
+
+  .purple {
+    color: var(--text-color-purple);
+  }
+
+  .yellow {
+    color: var(--text-color-yellow);
+  }
+
+  .green {
+    color: var(--text-color-green);
+  }
+
+  .blue {
+    color: var(--text-color-blue);
+  }
+
+  .red {
+    color: var(--text-color-red);
+  }
+
+  .italic {
+    font-style: italic;
   }
 
   .posts {

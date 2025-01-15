@@ -60,6 +60,11 @@
     --text-color-primary: #ababab;
     --text-color-secondary: #777777;
     --text-gradient: linear-gradient(#ffffff, #ffffff 50%, #aeaeae);
+    --text-color-purple: #d4bff9;
+    --text-color-yellow: #ffe38a;
+    --text-color-green: #27ffc2;
+    --text-color-blue: #93d9ff;
+    --text-color-red: #ff9dba;
 
     /* Border colors */
     --border-color-card: #242424;
@@ -104,6 +109,7 @@
 
   /* Line heights */
   --line-height-header: 1;
+  --line-height-subheader: 1.2;
   --line-height-text: 1.5;
 
   /* Border styles */
