@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Img from "@components/Img.astro";
+import MaxStormtrooper from "@images/max-with-stormtrooper.jpg";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "src/consts";
 ---
@@ -11,36 +13,53 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "src/consts";
   }}
   pageTitle="About me"
 >
-  <div class="text-container">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-      integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu
-      turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-      adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus
-      sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna
-      fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet
-      mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer
-      quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit
-      amet.
-    </p>
-    <p>
-      Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-      rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis
-      purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae
-      congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-      porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt
-      lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer
-      feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue
-      quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum.
-      Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et
-      pharetra pharetra massa massa ultricies mi.
-    </p>
+  <div class="container">
+    <Img
+      src={MaxStormtrooper}
+      alt="Maximilian in London with a stormtrooper"
+      class="image"
+    />
+    <div class="text-container">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
+        integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu
+        turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+        adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus
+        sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget
+        magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius
+        sit amet mattis vulputate enim. Habitasse platea dictumst quisque
+        sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque
+        sagittis purus sit amet.
+      </p>
+      <p>
+        Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
+        rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis
+        purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae
+        congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
+        porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt
+        lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer
+        feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas
+        congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
+        bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus
+        urna et pharetra pharetra massa massa ultricies mi.
+      </p>
+    </div>
   </div>
 </BaseLayout>
 
 <style>
   @import "@styles/mixins.css";
+
+  .container {
+    @mixin centered-container;
+    flex-flow: column nowrap;
+  }
+
+  .image {
+    margin-bottom: var(--spacer-medium);
+    max-width: var(--max-width-text);
+  }
 
   .text-container {
     @mixin text-container var(--spacer-medium), var(--max-width-text);

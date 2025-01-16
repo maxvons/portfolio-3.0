@@ -95,7 +95,7 @@
   --font-size-secondary: 0.875rem;
 
   @mixin tablet {
-    --font-size-title: 8rem;
+    --font-size-title: 7rem;
     --font-size-header-large: 4rem;
     --font-size-header: 2.5rem;
     --font-size-primary: 1.375rem;
