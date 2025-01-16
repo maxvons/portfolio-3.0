@@ -20,7 +20,7 @@ const { class: className, ...rest } = Astro.props;
       />
     </a>
     <div class="links">
-      <Link url="/about" text="About" />
+      <Link url="/about" text="About" class="link" />
     </div>
   </nav>
 </header>
@@ -56,5 +56,9 @@ const { class: className, ...rest } = Astro.props;
     display: flex;
     align-items: center;
     gap: var(--spacer-small);
+  }
+
+  .link {
+    font-variation-settings: var(--mono-medium);
   }
 </style>

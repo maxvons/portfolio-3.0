@@ -3,16 +3,17 @@ interface Props {
   url: string;
   text: string;
   newTab?: boolean;
+  class?: string;
 }
 
-const { url, text, newTab } = Astro.props;
+const { url, text, newTab, class: className, ...rest } = Astro.props;
 
 const getTarget = () => {
   return newTab ? "_blank" : "_self";
 };
 ---
 
-<a href={url} target={getTarget()}>{text}</a>
+<a class={className} href={url} target={getTarget()} {...rest}>{text}</a>
 
 <style>
   @import "@styles/mixins.css";

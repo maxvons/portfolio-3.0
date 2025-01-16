@@ -1,0 +1,17 @@
+---
+import IconLink from "./IconLink.astro";
+---
+
+<div class="social-links">
+  <IconLink url="https://x.com/maximilianvons" icon="brand-x" newTab />
+  <IconLink url="https://github.com/maxvons" icon="brand-github" newTab />
+  <IconLink url="mailto:maximilianvons@gmail.com" icon="mail" newTab />
+  <IconLink url="/cv-maximilian-von-stephanides.pdf" icon="file-cv" newTab />
+</div>
+
+<style>
+  .social-links {
+    display: flex;
+    gap: var(--spacer-small);
+  }
+</style>

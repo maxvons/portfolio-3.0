@@ -22,6 +22,7 @@ h6 {
   color: var(--text-color-title);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-header);
+  font-variation-settings: var(--sans-casual-bold);
   margin: 0;
 }
 

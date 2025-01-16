@@ -39,9 +39,13 @@ const { title, description, pubDate, href } = Astro.props;
     color: var(--text-color-secondary);
     margin-bottom: var(--spacer-small);
     font-size: var(--font-size-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-uppercase);
+    font-variation-settings: var(--mono);
   }
 
   .blog-description {
     color: var(--text-color-primary);
+    font-family: var(--body-text-font);
   }
 </style>

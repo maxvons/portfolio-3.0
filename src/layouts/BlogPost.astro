@@ -86,6 +86,7 @@ const includeImg = cover && coverAlt;
 
     p {
       line-height: var(--line-height-text);
+      font-family: var(--body-text-font);
     }
   }
 
@@ -106,9 +107,10 @@ const includeImg = cover && coverAlt;
       align-items: flex-start;
       font-size: var(--font-size-secondary);
       gap: var(--spacer-very-small);
+      font-variation-settings: var(--mono);
 
       .last-updated-on {
-        font-style: italic;
+        font-variation-settings: var(--mono-italic);
         color: var(--text-color-secondary);
       }
     }

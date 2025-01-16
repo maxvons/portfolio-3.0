@@ -1,25 +1,24 @@
 @import "@styles/mixins.css";
 
 @font-face {
-  font-family: PublicSansVariable;
+  font-family: RecursiveVariable;
+  font-weight: 300 1000;
+  font-display: swap;
+  src: url("/fonts/Recursive_VF_1.085.woff2") format("woff2");
+}
+@font-face {
+  font-family: PiazzollaVariable;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/PublicSansVariable.ttf") format("truetype");
+  src: url("/fonts/Piazzolla.woff2") format("woff2");
 }
 @font-face {
-  font-family: PublicSansVariable;
+  font-family: PiazzollaVariable;
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/PublicSansVariable-Italic.ttf") format("truetype");
-}
-@font-face {
-  font-family: BricolageGrotesqueVariable;
-  font-style: normal;
-  font-weight: 200 800;
-  font-display: swap;
-  src: url("/fonts/BricolageGrotesqueVariable.ttf") format("truetype");
+  src: url("/fonts/Piazzolla-Italic.woff2") format("woff2");
 }
 
 /* CUSTOM: Define your light mode colors here */
@@ -82,8 +81,9 @@
 /* CUSTOM: Define all other variables here */
 :root {
   /* Font families */
-  --primary-font: "PublicSansVariable", sans-serif;
-  --header-font: "BricolageGrotesqueVariable", sans-serif;
+  --primary-font: "RecursiveVariable", serif;
+  --header-font: "RecursiveVariable", sans-serif;
+  --body-text-font: "PiazzollaVariable", serif;
   font-optical-sizing: auto; /* This enables optical sizing for the variable fonts so they look as good as possible at all sizes */
 
   /* Font sizes */
@@ -107,7 +107,33 @@
 
   /* Font weights */
   --font-weight-regular: 400;
+  --font-weight-medium: 500;
   --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Font styles */
+  --sans-casual-bold-italic: "MONO" 0, "CASL" 1, "wght" var(--font-weight-bold),
+    "slnt" -15, "CRSV" 0.5;
+  --sans-italic: "MONO" 0, "CASL" 0, "wght" var(--font-weight-regular),
+    "slnt" -15, "CRSV" 0.5;
+  --sans-casual-bold: "MONO" 0, "CASL" 1, "wght" var(--font-weight-bold),
+    "slnt" 0, "CRSV" 0.5;
+  --sans-medium: "MONO" 0, "CASL" 0, "wght" var(--font-weight-medium), "slnt" 0,
+    "CRSV" 0.5;
+  --sans-bold: "MONO" 0, "CASL" 0, "wght" var(--font-weight-bold), "slnt" 0,
+    "CRSV" 0.5;
+  --sans-black: "MONO" 0, "CASL" 0, "wght" var(--font-weight-black), "slnt" 0,
+    "CRSV" 0.5;
+  --sans-casual-black: "MONO" 0, "CASL" 1, "wght" var(--font-weight-black),
+    "slnt" 0, "CRSV" 0.5;
+  --mono: "MONO" 1, "CASL" 0, "wght" var(--font-weight-regular), "slnt" 0,
+    "CRSV" 0.5;
+  --mono-italic: "MONO" 1, "CASL" 0, "wght" var(--font-weight-regular),
+    "slnt" -15, "CRSV" 0.5;
+  --mono-medium: "MONO" 1, "CASL" 0, "wght" var(--font-weight-medium), "slnt" 0,
+    "CRSV" 0.5;
+  --mono-bold: "MONO" 1, "CASL" 0, "wght" var(--font-weight-bold), "slnt" 0,
+    "CRSV" 0.5;
 
   /* Line heights */
   --line-height-header: 1;

@@ -5,7 +5,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "src/consts";
 import BlogCard from "@components/BlogCard.astro";
 import Memoji from "@images/memoji.png";
 import Img from "@components/Img.astro";
-import IconLink from "@components/IconLink.astro";
+import SocialLinks from "@components/SocialLinks.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -21,16 +21,7 @@ const posts = (await getCollection("blog")).sort(
     <div class="avatar-container">
       <Img src={Memoji} alt="Maximilian thinking" class="avatar" />
     </div>
-    <div class="social-links">
-      <IconLink url="https://x.com/maximilianvons" icon="brand-x" newTab />
-      <IconLink url="https://github.com/maxvons" icon="brand-github" newTab />
-      <IconLink url="mailto:maximilianvons@gmail.com" icon="mail" newTab />
-      <IconLink
-        url="/cv-maximilian-von-stephanides.pdf"
-        icon="file-cv"
-        newTab
-      />
-    </div>
+    <SocialLinks />
     <p class="location">Oslo, Norway</p>
   </div>
   <h2 class="subheader">
@@ -100,16 +91,12 @@ const posts = (await getCollection("blog")).sort(
     }
   }
 
-  .social-links {
-    display: flex;
-    gap: var(--spacer-small);
-  }
-
   .location {
     text-transform: uppercase;
     letter-spacing: var(--letter-spacing-uppercase);
     font-size: var(--font-size-secondary);
     color: var(--text-color-secondary);
+    font-variation-settings: var(--mono);
   }
 
   .subheader {
@@ -121,6 +108,8 @@ const posts = (await getCollection("blog")).sort(
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-subheader);
     margin-bottom: var(--spacer-very-large);
+    font-family: var(--body-text-font);
+    font-variation-settings: "wght" 400;
   }
 
   .purple {
