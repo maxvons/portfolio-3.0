@@ -21,28 +21,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "src/consts";
     />
     <div class="text-container">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-        integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu
-        turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-        adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus
-        sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget
-        magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius
-        sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-        sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque
-        sagittis purus sit amet.
+        First of all: My name is Maximilian von Stephanides. I currently live in
+        Oslo, Norway where I work as a software engineer at a fintech scaleup
+        called <a href="https://www.dintero.com">Dintero</a>. When I'm not at
+        work, you can usually find me at the gym, the kitchen, or the cinema.
       </p>
       <p>
-        Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-        rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis
-        purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae
-        congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-        porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt
-        lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer
-        feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas
-        congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-        bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus
-        urna et pharetra pharetra massa massa ultricies mi.
+        In addition to my career as a software engineer, I have a strong
+        interest in design. I have dedicated a lot of hours to learn more about
+        this field and how I can create beautiful and engaging user experiences.
+      </p>
+      <p>
+        For as long as I can remember, I've been fascinated with
+        products—digital or otherwise—that not only function well but also look
+        aesthetically pleasing. I've long believed in the importance of good
+        design in digital products and services, and the effect it can have on
+        the user experience.
+      </p>
+      <p>
+        The longer I've been actively using and developing digital experiences,
+        the more I've come to realize that <span class="italic">simplicity</span
+        > is the key to achieving a good design. This is especially true in the current
+        landscape of the web, where something is competing for your attention seemingly
+        all the time.
+      </p>
+      <p>
+        Due to these reasons, I strongly emphasize simplicity and aesthetics
+        when developing digital experiences. Together with the actual content
+        and functionality, I believe these factors form the core of a good
+        digital experience.
+      </p>
+      <p>
+        My design interest together with my computer science education and
+        engineering experience allow me to create beautiful, accessible, simple,
+        and intuitive digital products that stand out.
       </p>
     </div>
   </div>
@@ -64,5 +76,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "src/consts";
   .text-container {
     @mixin text-container var(--spacer-medium), var(--max-width-text);
     font-family: var(--body-text-font);
+  }
+
+  .italic {
+    font-style: italic;
   }
 </style>
