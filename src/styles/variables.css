@@ -87,8 +87,8 @@
   font-optical-sizing: auto; /* This enables optical sizing for the variable fonts so they look as good as possible at all sizes */
 
   /* Font sizes */
-  --font-size-title: 5rem;
-  --font-size-header-large: 3rem;
+  --font-size-title: 4rem;
+  --font-size-header-large: 2.5rem;
   --font-size-header: 2rem;
   --font-size-logo: 1.875rem;
   --font-size-primary: 1.125rem;
