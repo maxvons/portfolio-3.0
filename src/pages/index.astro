@@ -31,6 +31,20 @@ const posts = (await getCollection("blog")).sort(
       >photographer</span
     >, and <span class="red italic">powerlifter</span>
   </h2>
+  <div class="text-container">
+    <p>
+      Hey 👋 I'm Maximilian von Stephanides: A software engineer and competitive
+      powerlifter based in Oslo, Norway, currently working at <a
+        href="https://www.dintero.com">Dintero</a
+      >.
+    </p>
+    <p>
+      Outside of engineering, I'm passionate about design and dedicated to
+      creating digital products that are simple, aesthetically pleasing, and
+      intuitive. By combining my technical expertise and design interest, I aim
+      to craft intuitive and beautiful digital solutions that stand out.
+    </p>
+  </div>
   <div class="posts">
     {
       posts.map((post) => (
@@ -143,7 +157,9 @@ const posts = (await getCollection("blog")).sort(
     max-width: var(--max-width-text);
   }
 
-  a {
-    text-decoration: none;
+  .text-container {
+    @mixin text-container var(--spacer-medium), var(--max-width-text);
+    font-family: var(--body-text-font);
+    margin-bottom: var(--spacer-very-large);
   }
 </style>
